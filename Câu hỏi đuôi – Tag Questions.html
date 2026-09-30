@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Câu hỏi đuôi – Tag Questions</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0b2b;--deep:#181242;--card:#1f1858;--vio:#6a4ce0;--org:#ff9a4d;--gold:#ffd27d;--teal:#5fe0d2;--pink:#ff7eb6;--txt:#e6e1ff;--mute:#a9a2dd;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font:400 16px/1.75 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:hidden}
+#ff{position:fixed;inset:0;z-index:0;pointer-events:none}
+#bar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--vio),var(--org));z-index:20;box-shadow:0 0 12px var(--org)}
+#snd{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:12px;z-index:20;width:46px;height:46px;border-radius:50%;border:2px solid var(--org);background:#181242cc;color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(6px)}
+main,header,footer{position:relative;z-index:1}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-family:"Baloo 2",sans-serif}
+header{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#ff9a4d 0,#c2569a 22%,#5b3fd0 50%,#181242 78%,var(--bg) 100%)}
+.tree{position:absolute;bottom:0;height:88%;width:34%;max-width:340px;fill:#0a0724}
+.tree.l{left:-4%}.tree.r{right:-4%;transform:scaleX(-1)}
+.ground{position:absolute;bottom:0;left:0;right:0;height:14%;background:linear-gradient(transparent,#0a0724 70%)}
+.fox{width:120px;animation:hop 3s ease-in-out infinite;filter:drop-shadow(0 0 16px #ff9a4d99)}
+.tail{transform-origin:80px 75px;animation:wag 1.6s ease-in-out infinite}
+@keyframes wag{50%{transform:rotate(-14deg)}}
+@keyframes hop{50%{transform:translateY(-14px)}}
+h1{font:800 clamp(42px,9vw,86px)/1 "Baloo 2";color:#fff;margin:14px 0 4px;text-shadow:0 4px 0 #5b3fd0,0 0 40px #ffd27d88;position:relative}
+h1 small{display:block;font-size:.42em;color:var(--gold);text-shadow:0 2px 0 #7a3d12;margin-top:6px}
+.sub{max-width:520px;color:#fbe9ff;position:relative;text-shadow:0 1px 8px #0008}
+.go{position:relative;margin-top:28px;padding:12px 30px;border-radius:40px;border:2px solid var(--gold);background:linear-gradient(135deg,#ff9a4d,#ff7eb6);color:#2a0f3a;font:800 18px "Baloo 2";cursor:pointer;box-shadow:0 0 30px #ff9a4d88;animation:glow 2.2s infinite}
+@keyframes glow{50%{box-shadow:0 0 46px #ffd27dcc;transform:scale(1.05)}}
+.nomus{position:relative;margin-top:12px;background:none;border:0;color:#e6e1ff;text-decoration:underline;font:500 14px "Be Vietnam Pro";cursor:pointer}
+section{padding:90px 0 20px}
+.ttl{text-align:center;margin-bottom:26px}
+.ttl h2{font:800 clamp(28px,5.5vw,46px)/1.1 "Baloo 2";color:#fff;text-shadow:0 3px 0 #5b3fd0,0 0 28px #ff9a4d66}
+.ttl p{color:var(--gold);font:600 15px "Baloo 2";margin-top:6px}
+.ttl::after{content:"✦  ✦  ✦";display:block;color:var(--org);letter-spacing:8px;margin-top:8px;font-size:12px}
+.box{background:linear-gradient(160deg,var(--card),var(--deep));border:1.5px solid #3b2f8f;border-radius:26px;padding:24px 26px;box-shadow:0 14px 40px #0008}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.on{opacity:1;transform:none}
+b{color:var(--gold);font-weight:600}
+i.e{font-style:italic;color:var(--teal)}
+u{text-decoration-color:var(--org);text-underline-offset:4px;text-decoration-thickness:2px}
+h3{font-size:22px;color:#fff;margin-bottom:6px}
+.k{color:var(--org)}
+.ex{background:#0e0b2b99;border-left:3px solid var(--org);padding:8px 14px;border-radius:0 12px 12px 0;margin-top:10px}
+.bad{border-color:#ff6b8a}.bad s{color:#ff9db1}.ok{border-color:var(--teal)}
+/* magnet */
+.mag{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;text-align:center}
+.pole{width:74px;height:74px;border-radius:20px;display:grid;place-items:center;font:800 40px "Baloo 2";color:#fff;transition:.5s}
+.mag .stage{font:600 clamp(18px,3.6vw,26px)/1.5 "Baloo 2";min-height:84px;display:grid;place-items:center}
+.stage span{display:block;animation:pop .5s}
+@keyframes pop{from{opacity:0;transform:scale(.6)}}
+.sw{display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.btn{font:800 16px "Baloo 2";padding:7px 22px;border-radius:30px;border:2px solid var(--vio);background:transparent;color:var(--txt);cursor:pointer;transition:.25s}
+.btn:hover{transform:translateY(-3px);border-color:var(--org)}
+.btn.on{background:var(--org);color:#2a0f3a;border-color:var(--org);box-shadow:0 0 20px #ff9a4d88}
+/* steps */
+.st{display:grid;gap:14px;margin-bottom:24px}
+.st div{display:flex;gap:16px;padding:16px 20px;border-radius:20px;background:var(--card);border:1.5px solid #3b2f8f;transition:.3s}
+.st div:hover{transform:translateX(8px);border-color:var(--org)}
+.st .n{flex:none;width:44px;height:44px;border-radius:50%;background:var(--org);color:#2a0f3a;display:grid;place-items:center;font:800 22px "Baloo 2"}
+.demo{text-align:center}
+.demo .out{font:800 clamp(20px,4.5vw,32px) "Baloo 2";margin:14px 0;min-height:52px;color:#fff}
+.demo .out em{font-style:normal;color:var(--org);animation:pop .5s;display:inline-block}
+.demo .note{color:var(--mute);min-height:28px;font-size:15px}
+/* tabs & tables */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:20px}
+.tabs .btn{font-size:15px;padding:5px 16px}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:15px}
+th{color:var(--gold);text-align:left;font:800 15px "Baloo 2";padding:8px 10px;border-bottom:2px solid #3b2f8f}
+td{padding:9px 10px;border-bottom:1px solid #2b2370;vertical-align:top}
+.tw{overflow-x:auto}
+.warn{margin-top:14px;padding:12px 16px;border-radius:16px;background:#ff7eb622;border:1.5px dashed var(--pink)}
+.pane{animation:pop .45s}
+/* check */
+.ck{display:flex;gap:14px;align-items:flex-start;padding:14px 18px;border-radius:18px;background:var(--card);border:1.5px solid #3b2f8f;cursor:pointer;margin-bottom:12px;transition:.3s;user-select:none}
+.ck .bx{flex:none;width:30px;height:30px;border-radius:10px;border:2px solid var(--org);display:grid;place-items:center;color:transparent;transition:.3s}
+.ck.on{border-color:var(--teal)}.ck.on .bx{background:var(--teal);color:#0e0b2b;border-color:var(--teal);transform:rotate(360deg)}
+#done{text-align:center;font:800 20px "Baloo 2";color:var(--teal);min-height:32px}
+/* quiz */
+.q .dots{display:flex;gap:6px;justify-content:center;margin-bottom:16px}
+.q .dots i{width:12px;height:12px;border-radius:50%;background:#3b2f8f;transition:.3s}
+.q .dots i.a{background:var(--org);transform:scale(1.3)}.q .dots i.r{background:var(--teal)}.q .dots i.w{background:var(--pink)}
+.q h4{font:800 clamp(20px,4vw,28px)/1.4 "Baloo 2";text-align:center;color:#fff;margin-bottom:16px}
+.opts{display:grid;gap:10px}
+.opts button{font:600 18px "Baloo 2";padding:11px;border-radius:16px;border:2px solid var(--vio);background:transparent;color:var(--txt);cursor:pointer;transition:.25s}
+.opts button:hover:not(:disabled){border-color:var(--org);transform:scale(1.02)}
+.opts .c{background:var(--teal);color:#0e0b2b;border-color:var(--teal)}
+.opts .x{background:var(--pink);color:#2a0f3a;border-color:var(--pink);animation:shk .4s}
+@keyframes shk{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+#fb{margin-top:14px;min-height:50px;text-align:center;color:var(--mute)}
+#nx{display:none;margin:10px auto 0}
+.end{text-align:center;padding:80px 20px 100px}
+.end p{font-size:18px;font-style:italic;max-width:680px;margin:0 auto}
+@media(max-width:600px){.mag{grid-template-columns:1fr}.pole{margin:auto}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<button id="snd" aria-label="Bật/tắt âm thanh">🔇</button>
+<canvas id="ff"></canvas>
+<svg width="0" height="0" style="position:absolute"><symbol id="tr" viewBox="0 0 200 600"><path d="M0 0h70c-20 60 10 110 30 170 10 50-30 90-10 150 20 60 40 90 50 130l30 150H0z"/><circle cx="60" cy="60" r="60"/><circle cx="100" cy="190" r="34"/><circle cx="30" cy="150" r="40"/></symbol></svg>
+
+<header>
+  <svg class="tree l" viewBox="0 0 200 600"><use href="#tr"/></svg>
+  <svg class="tree r" viewBox="0 0 200 600"><use href="#tr"/></svg>
+  <div class="ground"></div>
+  <svg class="fox" viewBox="0 0 140 110" style="position:relative"><g class="tail"><path d="M80 80C120 90 135 50 118 30C112 55 100 62 82 62Z" fill="#ff9a4d"/><path d="M118 30c-3 6-4 12-6 18 6-4 10-10 6-18z" fill="#fff"/></g><ellipse cx="60" cy="82" rx="30" ry="20" fill="#ff8a3d"/><circle cx="50" cy="52" r="26" fill="#ff9a4d"/><path d="M28 36L26 8L46 26zM72 36L74 8L54 26z" fill="#ff9a4d"/><path d="M50 62c-14 0-20-6-22-10 8 4 14 4 22 4s14 0 22-4c-2 4-8 10-22 10z" fill="#fff"/><circle cx="41" cy="50" r="4" fill="#181242"/><circle cx="59" cy="50" r="4" fill="#181242"/><circle cx="50" cy="58" r="3" fill="#181242"/></svg>
+  <h1>CÂU HỎI ĐUÔI<small>Tag Questions</small></h1>
+  <p class="sub">Chú cáo nhỏ sẽ dẫn bạn đi qua khu rừng đêm để nắm chắc chuyên đề ngữ pháp hay gặp trong đề thi.</p>
+  <button class="go" id="go">Bắt đầu hành trình ♪</button>
+  <button class="nomus" id="nomus">Vào học, không bật nhạc</button>
+</header>
+
+<main class="wrap" id="top">
+
+<section id="s1">
+  <div class="ttl rv"><h2>1. Bản chất của câu hỏi đuôi</h2><p>Nó là gì, vì sao có và dùng khi nào</p></div>
+  <div class="box rv"><h3>Câu hỏi đuôi là gì?</h3><p>Đây là một dạng câu hỏi ngắn được đính kèm ở <b>cuối</b> một câu trần thuật. Giống như cái đuôi của con vật, nó luôn đi liền phía sau để tạo thành một câu hoàn chỉnh.</p>
+  <h3 style="margin-top:16px">Tại sao lại hình thành? Khi nào dùng?</h3><p>Người bản xứ không phải lúc nào cũng muốn hỏi trực tiếp (như <i class="e">Are you a student?</i>). Đôi khi họ <b>đã biết trước 80-90% sự thật</b>, hoặc đang đưa ra một nhận định và chỉ muốn người nghe <b>xác nhận lại, đồng tình</b> với mình. Thay vì nói "Hôm nay trời đẹp. Bạn có nghĩ thế không?", họ sẽ nói "Hôm nay trời đẹp, <b>nhỉ?</b>". Chữ "nhỉ?", "phải không?" đó chính là câu hỏi đuôi.</p></div>
+  <div class="grid" style="margin-top:20px">
+    <div class="box rv"><h3>💡 Ứng dụng trong đời sống</h3><p>Dùng để duy trì cuộc hội thoại, thể hiện sự thân thiện, tìm kiếm sự đồng cảm.</p><div class="ex">VD: <i class="e">You look tired, <b>don't you?</b></i><br>(Trông cậu có vẻ mệt, phải không?)</div></div>
+    <div class="box rv"><h3>🎓 Ứng dụng trong bài thi</h3><p>Luôn chiếm 1-2 câu trong các đề thi (đặc biệt là thi vào 10). Dùng để kiểm tra khả năng nhận diện <b>Thì (Tenses)</b> và các từ mang ý nghĩa <b>phủ định ngầm</b>.</p></div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="ttl rv"><h2>2. Quy tắc cốt lõi: nam châm trái dấu</h2><p>Bí quyết sống còn của câu hỏi đuôi</p></div>
+  <div class="box rv"><p style="text-align:center;margin-bottom:16px">Mệnh đề chính và câu hỏi đuôi giống như 2 cực của nam châm, luôn phải <b>ngược nhau</b>. Bấm để thử:</p>
+    <div class="mag"><div class="pole" id="p1"></div><div class="stage" id="stg"></div><div class="pole" id="p2"></div></div>
+    <div class="sw"><button class="btn on" data-m="0">Mệnh đề trước KHẲNG ĐỊNH (+)</button><button class="btn" data-m="1">Mệnh đề trước PHỦ ĐỊNH (−)</button></div>
+    <div class="ex" style="margin-top:20px;text-align:center;border:2px dashed var(--vio);border-radius:16px"><b>Câu khẳng định (+), đuôi phủ định (−) ?</b><br><b>Câu phủ định (−), đuôi khẳng định (+) ?</b></div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="ttl rv"><h2>3. Ba bước thần thánh để lập câu hỏi đuôi</h2><p>Khi làm bài thi, luôn tuân thủ đúng 3 bước trong đầu</p></div>
+  <div class="st">
+    <div class="rv"><span class="n">1</span><p><b>Tìm trợ động từ (Auxiliary Verb).</b> Xác định câu đang ở thì nào (to-be, do/does/did, have/has/had, will/can/should...). Bê nguyên trợ động từ đó ra phía sau.</p></div>
+    <div class="rv"><span class="n">2</span><p><b>Đổi dấu (+ thành −, − thành +).</b> Nếu câu trước đang (+) thì đuôi thêm "not" (viết tắt là <b>n't</b>). Nếu câu trước có "not" thì đuôi bỏ "not".</p></div>
+    <div class="rv"><span class="n">3</span><p><b>Đổi chủ ngữ thành ĐẠI TỪ.</b> Chủ ngữ ở đuôi <b>tuyệt đối không được dùng danh từ riêng</b> (không dùng Mary, the dog, my father). Phải biến thành đại từ: <b>I, you, we, they, he, she, it</b>.</p></div>
+  </div>
+  <div class="box demo rv"><h3>Thử tự lập đuôi từng bước</h3>
+    <div class="sw" id="dsel" style="margin:6px 0 0"></div>
+    <div class="out" id="dout"></div><div class="note" id="dnote"></div>
+    <button class="btn" id="dnext" style="margin-top:12px">Bước 1 ▶</button></div>
+</section>
+
+<section id="s4">
+  <div class="ttl rv"><h2>4. Các trường hợp đặc biệt cực kỳ quan trọng</h2><p>Đề thi luôn xoáy vào những ngoại lệ này, hãy học thuộc từng nhóm</p></div>
+  <div class="box rv"><div class="tabs" id="tabs"></div><div id="pane" class="pane"></div></div>
+</section>
+
+<section id="s5">
+  <div class="ttl rv"><h2>5. Check lại bài trước khi nộp</h2><p>Rà soát theo 3 câu hỏi, tích từng ô khi bạn đã kiểm tra</p></div>
+  <div class="rv" id="cks"></div><div id="done"></div>
+</section>
+
+<section id="s6">
+  <div class="ttl rv"><h2>Luyện tập cùng cáo nhỏ</h2><p>10 câu hỏi nhanh để thử sức</p></div>
+  <div class="box q rv"><div class="dots" id="dots"></div><h4 id="qt"></h4><div class="opts" id="qo"></div><div id="fb"></div><button class="btn" id="nx">Câu tiếp ▶</button></div>
+</section>
+</main>
+
+<footer class="end"><div class="box rv" style="max-width:720px;margin:0 auto"><p>Nhớ nhé: <b>trái dấu, đúng trợ động từ, chủ ngữ thành đại từ</b>. Giữ vững 3 điều này là bạn ăn trọn điểm câu hỏi đuôi. Chúc bạn học vui, đúng không nào?</p></div></footer>
+
+<script>
+const $=s=>document.querySelector(s);
+/* ---------- audio ---------- */
+let ac,mg,on=false,tm,step=0;
+function init(){if(ac)return;ac=new(window.AudioContext||window.webkitAudioContext)();mg=ac.createGain();mg.gain.value=.55;const d=ac.createDelay();d.delayTime.value=.36;const f=ac.createGain();f.gain.value=.38;d.connect(f);f.connect(d);mg.connect(ac.destination);mg.connect(d);d.connect(ac.destination)}
+function tone(fr,t,du,ty,v){const o=ac.createOscillator(),g=ac.createGain();o.type=ty;o.frequency.value=fr;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+du);o.connect(g);g.connect(mg);o.start(t);o.stop(t+du+.05)}
+const SC=[523,587,659,784,880,1047,784,659],BS=[131,175,131,196];
+function beat(){const t=ac.currentTime+.05;if(step%8==0)tone(BS[(step/8)%4],t,3.2,"triangle",.09);if(Math.random()<.72)tone(SC[Math.floor(Math.random()*SC.length)]*(Math.random()<.2?.5:1),t,1.4,"sine",.07);step++}
+function sfx(k){if(!on)return;const t=ac.currentTime;({tap:()=>tone(720,t,.12,"sine",.12),ok:()=>[660,880,1175].forEach((f,i)=>tone(f,t+i*.09,.35,"sine",.13)),no:()=>{tone(250,t,.25,"triangle",.14);tone(200,t+.12,.3,"triangle",.12)},pop:()=>{tone(520,t,.1,"sine",.1);tone(780,t+.06,.14,"sine",.1)}})[k]()}
+function setSnd(v){on=v;$("#snd").textContent=v?"🔊":"🔇";if(v){init();ac.resume();clearInterval(tm);tm=setInterval(beat,470)}else clearInterval(tm)}
+$("#snd").onclick=()=>{setSnd(!on);sfx("tap")};
+$("#go").onclick=()=>{setSnd(true);sfx("pop");$("#s1").scrollIntoView()};
+$("#nomus").onclick=()=>$("#s1").scrollIntoView();
+document.addEventListener("click",e=>{if(e.target.closest(".btn,.ck,.opts button"))sfx("tap")},true);
+
+/* ---------- magnet ---------- */
+const M=[["You <u>are</u> a student, <b>aren't</b> you?","+","−","#3bb98f","#e0568a"],["You <u>aren't</u> a student, <b>are</b> you?","−","+","#e0568a","#3bb98f"]];
+function mag(i){const m=M[i];$("#stg").innerHTML="<span>"+m[0]+"</span>";const a=$("#p1"),b=$("#p2");a.textContent=m[1];b.textContent=m[2];a.style.background=m[3];b.style.background=m[4];a.style.boxShadow="0 0 24px "+m[3];b.style.boxShadow="0 0 24px "+m[4];document.querySelectorAll("[data-m]").forEach(x=>x.classList.toggle("on",x.dataset.m==i))}
+document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>mag(+b.dataset.m));mag(0);
+
+/* ---------- 3 steps demo ---------- */
+const D=[{s:"Mary can swim",t:["can","can't","can't she?"],n:["Trợ động từ của câu là can.","Câu trước khẳng định (+) nên đuôi thêm n't.","Chủ ngữ Mary đổi thành đại từ she."]},
+{s:"The dogs don't like cats",t:["don't","do","do they?"],n:["Trợ động từ của câu là don't.","Câu trước đã có not (−) nên đuôi bỏ not.","Chủ ngữ The dogs đổi thành đại từ they."]},
+{s:"My father has gone out",t:["has","hasn't","hasn't he?"],n:["Trợ động từ (thì hoàn thành) là has.","Câu trước khẳng định (+) nên đuôi thêm n't.","Chủ ngữ My father đổi thành đại từ he."]}];
+let di=0,ds=0;
+function drender(){const d=D[di];$("#dout").innerHTML=d.s+", "+(ds?`<em>${d.t[ds-1]}</em>`:"___?");$("#dnote").textContent=ds?d.n[ds-1]:"Bấm nút để lập đuôi theo từng bước.";$("#dnext").textContent=ds<3?`Bước ${ds+1} ▶`:"Làm lại ↺";document.querySelectorAll("#dsel .btn").forEach((b,i)=>b.classList.toggle("on",i==di))}
+D.forEach((d,i)=>{const b=document.createElement("button");b.className="btn";b.textContent="Câu "+(i+1);b.onclick=()=>{di=i;ds=0;drender()};$("#dsel").appendChild(b)});
+$("#dnext").onclick=()=>{ds=ds<3?ds+1:0;if(ds==3)sfx("ok");drender()};drender();
+
+/* ---------- special cases ---------- */
+const T=(h,r)=>`<div class="tw"><table><tr>${h.map(x=>`<th>${x}</th>`).join("")}</tr>${r.map(x=>`<tr>${x.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</table></div>`;
+const G=[
+["Nhóm 1: Bất quy tắc","Những từ \"nhìn mặt bắt hình dong\".",T(["Trường hợp","Cách biến đổi ở đuôi","Ví dụ"],[
+["<b>I am ...</b>","<b>aren't I?</b> (tiếng Anh không có \"amn't I\")","I am a good student, aren't I?"],
+["<b>Let's ...</b> (rủ rê làm gì)","<b>shall we?</b>","Let's go to the cinema, shall we?"],
+["<b>Câu mệnh lệnh</b> (V! / Don't V!)","<b>will you?</b> (khẳng định hay phủ định đều dùng will you)","Open the door, will you?<br>Don't talk, will you?"],
+["<b>This / That is ...</b>","<b>isn't it?</b> (đổi thành it)","That is your car, isn't it?"],
+["<b>These / Those are ...</b>","<b>aren't they?</b> (đổi thành they)","These are your books, aren't they?"],
+["<b>There is / There are</b>","<b>isn't there / aren't there?</b> (giữ nguyên there)","There is a pen on the table, isn't there?"]])],
+["Nhóm 2: Phủ định ngầm","Cái bẫy: trong câu không có chữ NOT.",`<p>Câu chứa các từ phủ định hoặc bán phủ định được tính là câu <b>PHỦ ĐỊNH (−)</b>, nên đuôi bắt buộc phải là <b>KHẲNG ĐỊNH (+)</b>.</p><p style="margin-top:8px"><b>Các từ phủ định ngầm:</b> never (không bao giờ), seldom/rarely (hiếm khi), hardly/scarcely/barely (hầu như không), few/little (rất ít, gần như không có), neither, none.</p><div class="ex bad">[SAI] <s>He never goes to school late, doesn't he?</s></div><div class="ex ok">[ĐÚNG] He never goes to school late, <b>does he?</b></div><div class="ex bad">[SAI] <s>She can hardly lift that box, can't she?</s></div><div class="ex ok">[ĐÚNG] She can hardly lift that box, <b>can she?</b></div>`],
+["Nhóm 3: Đại từ bất định","Chủ ngữ không chỉ đích danh ai hay cái gì.",`<p>Ta phải đổi chủ ngữ về đại từ nhân xưng thích hợp ở phần đuôi.</p>`+T(["Chủ ngữ","Đại từ ở đuôi","Ví dụ"],[
+["<b>Chỉ NGƯỜI:</b> Everyone, Everybody, Someone, Somebody, Anyone, Anybody, No one, Nobody","<b>THEY</b>","Everyone is here, aren't they?"],
+["<b>Chỉ VẬT:</b> Everything, Something, Anything, Nothing","<b>IT</b>","Everything is fine, isn't it?"]])+`<div class="warn"><b>CẢNH BÁO BẪY KÉP:</b> "Nobody", "No one" và "Nothing" vừa là đại từ, vừa mang nghĩa <b>PHỦ ĐỊNH</b>. Vì vậy đuôi của chúng phải là <b>KHẲNG ĐỊNH</b>.<div class="ex ok">[ĐÚNG] Nobody called me, <b>did they?</b> (dùng "did" vì Nobody mang nghĩa phủ định)</div><div class="ex ok">[ĐÚNG] Nothing is impossible, <b>is it?</b></div></div>`],
+["Nhóm 4: Have / Has / Had","Đừng thấy have/has là lôi ngay ra làm đuôi.",`<p>Phải xem nó đang đóng vai trò gì trong câu.</p><div class="ex"><b>Trường hợp 1 – Là trợ động từ (thì hoàn thành):</b> phía sau nó CÓ động từ V3/ed. Ta dùng luôn Have/Has/Had làm đuôi.<br>VD: <i class="e">You have seen this movie, <b>haven't you?</b></i></div><div class="ex"><b>Trường hợp 2 – Là động từ thường</b> mang nghĩa "có, ăn, uống": phía sau KHÔNG có V3/ed. Ta PHẢI mượn trợ động từ Do/Does/Did.<br>VD: <i class="e">You have a car, <b>don't you?</b></i> (KHÔNG dùng: haven't you?)<br>VD: <i class="e">He had breakfast early, <b>didn't he?</b></i></div>`],
+["Nhóm 5: Khuyết thiếu đặc biệt","Ought to, used to, had better, would rather.",T(["Cấu trúc","Đuôi","Ví dụ"],[
+["<b>Ought to</b>","dùng <b>shouldn't</b>","You ought to go now, shouldn't you?"],
+["<b>Used to</b> (thói quen trong quá khứ)","mượn <b>didn't</b>","He used to smoke, didn't he?"],
+["<b>Had better ('d better)</b>","mượn ngay chữ <b>had</b>","You 'd better stay here, hadn't you?"],
+["<b>Would rather ('d rather)</b>","mượn ngay chữ <b>would</b>","(mượn would để lập đuôi)"]])],
+["Nhóm 6: Ma trận của MUST","Must có 3 ý nghĩa, đuôi sẽ khác nhau.",T(["Must = ...","Đuôi","Ví dụ"],[
+["<b>Sự bắt buộc</b> (phải làm gì)","dùng <b>mustn't</b>","We must study hard, mustn't we?"],
+["<b>Sự cấm đoán</b> (mustn't)","dùng <b>must</b>","You mustn't go late, must you?"],
+["<b>Sự phỏng đoán</b> (chắc hẳn là), thường đi với must be","lấy động từ <b>to-be</b> làm đuôi","He must be very tired, isn't he? (Anh ấy chắc hẳn là rất mệt, đúng không?)"]])],
+["Nhóm 7: I think / I believe","Cấu trúc I think / I believe / I suppose + mệnh đề.",`<p>Ta không lấy "I think" làm đuôi mà lấy <b>mệnh đề phía sau</b> làm chuẩn để chia đuôi.</p><div class="ex">VD 1: <i class="e">I think [she is a teacher], <b>isn't she?</b></i> (dựa vào "she is")</div><div class="warn"><b>QUY TẮC QUAN TRỌNG:</b> Nếu mệnh đề đầu là <b>"I don't think..."</b>, ta vẫn lấy mệnh đề sau làm đuôi, nhưng phải chuyển dấu phủ định đó cho mệnh đề sau (tức là đuôi ở dạng khẳng định).<div class="ex ok">VD 2: I don't think [he will come], <b>will he?</b> (chữ "don't" đã mang nghĩa phủ định cho toàn bộ câu nên đuôi phải là khẳng định)</div></div><p style="margin-top:12px"><b>Lưu ý:</b> Nếu chủ ngữ KHÔNG PHẢI LÀ "I" (He thinks, She believes...), ta lại lấy chính mệnh đề đầu để làm đuôi.</p><div class="ex">VD: <i class="e">He thinks she will come, <b>doesn't he?</b></i></div>`]];
+G.forEach((g,i)=>{const b=document.createElement("button");b.className="btn";b.textContent=g[0].split(":")[0];b.onclick=()=>gs(i);$("#tabs").appendChild(b)});
+function gs(i){const p=$("#pane");p.style.animation="none";p.offsetWidth;p.style.animation="";p.innerHTML=`<h3 class="k">${G[i][0]}</h3><p style="color:var(--mute)">${G[i][1]}</p>${G[i][2]}`;[...$("#tabs").children].forEach((b,j)=>b.classList.toggle("on",i==j))}gs(0);
+
+/* ---------- checklist ---------- */
+const C=["<b>Nhìn vào đuôi:</b> Đã trái dấu (+/−) với mệnh đề trước chưa? Có bị dính bẫy các từ phủ định ngầm (never, hardly) không?","<b>Nhìn vào trợ động từ:</b> Đã dùng đúng trợ động từ của thì đó chưa? Có nhầm Have/Has thành trợ động từ khi nó là động từ chính không?","<b>Nhìn vào chủ ngữ đuôi:</b> Đã đổi tên riêng thành đại từ (he, she, it, they) chưa? \"Everyone\" đã đổi thành \"They\" chưa?"];
+$("#cks").innerHTML=C.map(c=>`<div class="ck"><span class="bx">✓</span><p>${c}</p></div>`).join("");
+document.querySelectorAll(".ck").forEach(c=>c.onclick=()=>{c.classList.toggle("on");const all=document.querySelectorAll(".ck.on").length==3;$("#done").textContent=all?"🎉 Sẵn sàng nộp bài!":"";if(all)sfx("ok")});
+
+/* ---------- quiz ---------- */
+const Q=[["She is a teacher, ___?",["isn't she","is she","doesn't she"],0,"Câu (+) dùng to-be nên đuôi là isn't she."],
+["Let's go out, ___?",["will we","shall we","don't we"],1,"Let's luôn dùng shall we."],
+["He never comes late, ___?",["doesn't he","does he","is he"],1,"Never là phủ định ngầm nên đuôi khẳng định."],
+["Everyone is here, ___?",["aren't they","isn't he","isn't it"],0,"Everyone đổi thành they."],
+["You have a car, ___?",["haven't you","don't you","do you"],1,"Have nghĩa là \"có\" (động từ thường) nên mượn do."],
+["I don't think he will come, ___?",["don't I","won't he","will he"],2,"Lấy mệnh đề sau, chuyển phủ định nên đuôi khẳng định."],
+["You mustn't go late, ___?",["must you","mustn't you","do you"],0,"Must cấm đoán dùng đuôi must."],
+["Open the door, ___?",["don't you","will you","shall we"],1,"Câu mệnh lệnh dùng will you."],
+["Nothing is impossible, ___?",["isn't it","is it","are they"],1,"Nothing mang nghĩa phủ định nên đuôi khẳng định, đại từ it."],
+["I am a good student, ___?",["amn't I","am I not","aren't I"],2,"I am chuyển thành aren't I."]];
+let qi=0,sc=0,lock=false;const dots=$("#dots");dots.innerHTML=Q.map(()=>"<i></i>").join("");
+function qr(){lock=false;const q=Q[qi];$("#qt").textContent=q[0];$("#fb").textContent="Chọn đáp án đúng nhé!";$("#nx").style.display="none";[...dots.children].forEach((d,i)=>d.classList.toggle("a",i==qi&&!d.classList.contains("r")&&!d.classList.contains("w")));
+$("#qo").innerHTML=q[1].map((o,i)=>`<button data-i="${i}">${o}</button>`).join("");
+document.querySelectorAll("#qo button").forEach(b=>b.onclick=()=>{if(lock)return;lock=true;const i=+b.dataset.i,ok=i==q[2];const all=document.querySelectorAll("#qo button");all.forEach(x=>x.disabled=true);all[q[2]].classList.add("c");if(!ok)b.classList.add("x");sc+=ok;dots.children[qi].className=ok?"r":"w";sfx(ok?"ok":"no");$("#fb").innerHTML=(ok?"🦊 Chuẩn rồi! ":"🦊 Chưa đúng. ")+q[3];$("#nx").style.display="block";$("#nx").textContent=qi<Q.length-1?"Câu tiếp ▶":"Xem kết quả ★"})}
+function nxt(){if(qi<Q.length-1){qi++;qr()}else{$("#qt").textContent=`Bạn đúng ${sc}/${Q.length} câu`;$("#qo").innerHTML="";$("#fb").textContent=sc>=8?"Tuyệt vời, cáo nhỏ tự hào về bạn!":sc>=5?"Khá lắm! Ôn lại các nhóm đặc biệt rồi thử lại nhé.":"Đừng lo, đọc lại 3 bước thần thánh rồi làm lại nha.";$("#nx").textContent="Làm lại ↺";$("#nx").onclick=()=>{qi=0;sc=0;dots.innerHTML=Q.map(()=>"<i></i>").join("");$("#nx").onclick=nxt;qr()};if(sc>=8)sfx("ok")}}
+$("#nx").onclick=nxt;
+qr();
+
+/* ---------- scroll fx ---------- */
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+addEventListener("scroll",()=>{$("#bar").style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+"%"});
+/* fireflies */
+const c=$("#ff"),x=c.getContext("2d");let F=[];
+function rs(){c.width=innerWidth;c.height=innerHeight;F=Array.from({length:46},()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*2+1,p:Math.random()*6,s:Math.random()*.4+.1}))}rs();addEventListener("resize",rs);
+(function d(t){x.clearRect(0,0,c.width,c.height);F.forEach(f=>{f.y-=f.s;f.x+=Math.sin(t/900+f.p)*.5;if(f.y<-10){f.y=c.height+10}const a=.3+.7*Math.abs(Math.sin(t/700+f.p));x.globalAlpha=a;x.shadowBlur=14;x.shadowColor="#ffd27d";x.fillStyle="#ffe7a8";x.beginPath();x.arc(f.x,f.y,f.r,0,7);x.fill()});requestAnimationFrame(d)})(0);
+</script>
+</body>
+</html>
